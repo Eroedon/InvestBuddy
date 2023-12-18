@@ -1,0 +1,717 @@
+.microsoftteamsImage1Icon {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  border-radius: var(--br-533xl-5);
+  width: 1960px;
+  height: 1105px;
+  object-fit: cover;
+}
+.homeChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 var(--br-xl) var(--br-xl);
+  background-color: var(--color-midnightblue);
+  width: 1920px;
+  height: 95px;
+}
+.portfolio {
+  position: relative;
+  text-transform: capitalize;
+}
+.frame,
+.frame1,
+.portfolioWrapper {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  width: 259px;
+  color: inherit;
+}
+.portfolioWrapper {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-xl);
+  box-sizing: border-box;
+}
+.frame,
+.frame1 {
+  top: 18px;
+  left: 734px;
+  height: 55px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+}
+.frame1 {
+  left: 1043px;
+}
+.stocks {
+  position: relative;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 77px;
+  height: 39px;
+  flex-shrink: 0;
+}
+.frame2,
+.stocksWrapper {
+  position: absolute;
+  width: 259px;
+}
+.stocksWrapper {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-xl);
+  box-sizing: border-box;
+}
+.frame2 {
+  cursor: pointer;
+  text-decoration: none;
+  top: 18px;
+  left: 1338px;
+  height: 79px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: inherit;
+}
+.loginSign {
+  position: relative;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 39px;
+  flex-shrink: 0;
+}
+.frame3 {
+  text-decoration: none;
+  position: absolute;
+  top: 18px;
+  left: 1637px;
+  width: 259px;
+  height: 79px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: inherit;
+}
+.homeChild1,
+.homeInner,
+.homeItem,
+.rectangleDiv {
+  position: absolute;
+  top: 214px;
+  left: 115px;
+  background-color: var(--color-gainsboro-100);
+  width: 456px;
+  height: 862px;
+}
+.homeChild1,
+.homeInner,
+.rectangleDiv {
+  top: 198px;
+  left: 1317px;
+  height: 882px;
+}
+.homeChild1,
+.rectangleDiv {
+  border-radius: var(--br-11xl);
+  background-color: var(--color-midnightblue);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+.homeChild1 {
+  top: 194px;
+  left: 115px;
+}
+.topCryptocurrencies {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 143px;
+  left: 1416px;
+  text-transform: capitalize;
+  color: inherit;
+}
+.rectangleIcon {
+  position: absolute;
+  top: 916px;
+  left: 1384px;
+  width: 50px;
+  height: 43.9px;
+  object-fit: cover;
+}
+.homeChild2,
+.homeChild3,
+.homeChild4,
+.homeChild5,
+.homeChild6,
+.homeChild7 {
+  position: absolute;
+  top: 237px;
+  left: 1361px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 367px;
+  height: 95px;
+}
+.homeChild3,
+.homeChild4,
+.homeChild5,
+.homeChild6,
+.homeChild7 {
+  top: 366px;
+}
+.homeChild4,
+.homeChild5,
+.homeChild6,
+.homeChild7 {
+  top: 753px;
+}
+.homeChild5,
+.homeChild6,
+.homeChild7 {
+  top: 882px;
+}
+.homeChild6,
+.homeChild7 {
+  top: 495px;
+}
+.homeChild7 {
+  top: 624px;
+}
+.ellipseDiv,
+.homeChild10,
+.homeChild11,
+.homeChild12,
+.homeChild8,
+.homeChild9 {
+  position: absolute;
+  top: 1025px;
+  left: 1484px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  width: 15px;
+  height: 15px;
+}
+.homeChild10,
+.homeChild11,
+.homeChild12,
+.homeChild8,
+.homeChild9 {
+  left: 1568px;
+}
+.homeChild10,
+.homeChild11,
+.homeChild12,
+.homeChild9 {
+  left: 1547px;
+}
+.homeChild10,
+.homeChild11,
+.homeChild12 {
+  left: 1526px;
+}
+.homeChild11,
+.homeChild12 {
+  left: 1505px;
+}
+.homeChild12 {
+  left: 1589px;
+}
+.btc {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-5xl);
+}
+.bitcoinBtcContainer {
+  text-decoration: none;
+  position: absolute;
+  top: 259px;
+  left: 1372px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  color: inherit;
+}
+.hbar {
+  font-size: var(--font-size-3xl);
+}
+.hederaHbar3435807 {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-400);
+}
+.hederaHbarContainer {
+  text-decoration: none;
+  position: absolute;
+  top: 645px;
+  left: 1372px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  color: inherit;
+}
+.sol {
+  font-size: var(--font-size-5xl);
+}
+.litecoinLtcContainer,
+.solanaSolContainer,
+.xrpXrpContainer {
+  text-decoration: none;
+  position: absolute;
+  top: 900px;
+  left: 1372px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  color: inherit;
+}
+.litecoinLtcContainer,
+.xrpXrpContainer {
+  top: 777px;
+  left: 1370px;
+}
+.litecoinLtcContainer {
+  top: 517px;
+  left: 1372px;
+}
+.span6 {
+  font-size: var(--font-size-11xl);
+}
+.ethereumEthContainer {
+  text-decoration: none;
+  position: absolute;
+  top: 391px;
+  left: 1370px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  font-size: var(--font-size-xl);
+  color: inherit;
+}
+.btc1Icon,
+.eth1Icon,
+.hbarIcon,
+.homeChild13,
+.image1Icon,
+.liteIcon,
+.xrpIcon {
+  position: absolute;
+  top: 392px;
+  left: 1382px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.btc1Icon,
+.hbarIcon,
+.homeChild13,
+.image1Icon,
+.liteIcon,
+.xrpIcon {
+  top: 520px;
+}
+.btc1Icon,
+.hbarIcon,
+.homeChild13,
+.image1Icon,
+.xrpIcon {
+  top: 262px;
+  left: 1383px;
+}
+.hbarIcon,
+.homeChild13,
+.image1Icon,
+.xrpIcon {
+  top: 777px;
+  left: 1382px;
+}
+.hbarIcon,
+.homeChild13,
+.image1Icon {
+  top: 647px;
+}
+.homeChild13,
+.image1Icon {
+  top: 903px;
+  left: 1383px;
+}
+.homeChild13 {
+  top: 921px;
+  left: 182px;
+  height: 43.9px;
+}
+.homeChild14,
+.homeChild15,
+.homeChild16,
+.homeChild17,
+.homeChild18,
+.homeChild19 {
+  position: absolute;
+  top: 242px;
+  left: 159px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 367px;
+  height: 95px;
+}
+.homeChild15,
+.homeChild16,
+.homeChild17,
+.homeChild18,
+.homeChild19 {
+  top: 371px;
+}
+.homeChild16,
+.homeChild17,
+.homeChild18,
+.homeChild19 {
+  top: 758px;
+}
+.homeChild17,
+.homeChild18,
+.homeChild19 {
+  top: 887px;
+}
+.homeChild18,
+.homeChild19 {
+  top: 500px;
+}
+.homeChild19 {
+  top: 629px;
+}
+.btc1 {
+  color: var(--color-gray-400);
+}
+.bitcoinBtcContainer1,
+.hederaHbarContainer1,
+.solanaSolContainer1 {
+  text-decoration: none;
+  position: absolute;
+  top: 264px;
+  left: 170px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  color: inherit;
+}
+.hederaHbarContainer1,
+.solanaSolContainer1 {
+  top: 650px;
+}
+.solanaSolContainer1 {
+  top: 905px;
+}
+.xrpXrpCheap {
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-400);
+}
+.ethereumEthContainer1,
+.litecoinLtcContainer1,
+.xrpXrpContainer1 {
+  text-decoration: none;
+  position: absolute;
+  top: 782px;
+  left: 168px;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+  color: inherit;
+}
+.ethereumEthContainer1,
+.litecoinLtcContainer1 {
+  top: 522px;
+  left: 170px;
+}
+.ethereumEthContainer1 {
+  top: 396px;
+  left: 168px;
+  font-size: var(--font-size-xl);
+}
+.btc2Icon,
+.eth2Icon,
+.hbarIcon1,
+.image2Icon,
+.liteIcon1,
+.xrpIcon1 {
+  position: absolute;
+  top: 397px;
+  left: 180px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.btc2Icon,
+.hbarIcon1,
+.image2Icon,
+.liteIcon1,
+.xrpIcon1 {
+  top: 525px;
+}
+.btc2Icon,
+.hbarIcon1,
+.image2Icon,
+.xrpIcon1 {
+  top: 267px;
+  left: 181px;
+}
+.hbarIcon1,
+.image2Icon,
+.xrpIcon1 {
+  top: 782px;
+  left: 180px;
+}
+.hbarIcon1,
+.image2Icon {
+  top: 652px;
+}
+.image2Icon {
+  top: 908px;
+  left: 181px;
+}
+.i,
+.n,
+.v {
+  position: absolute;
+  top: 718.3px;
+  left: 1748.3px;
+  font-family: var(--font-inter);
+  text-align: center;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+.n,
+.v {
+  top: 708px;
+  left: 1748px;
+  transform: rotate(-81.82deg);
+}
+.v {
+  top: 689.8px;
+  left: 1750.4px;
+  transform: rotate(-73.64deg);
+}
+.appLogoInspiraton8 {
+  position: absolute;
+  height: 9.44%;
+  width: 5.36%;
+  top: -0.65%;
+  right: 94.9%;
+  bottom: 91.2%;
+  left: -0.26%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.algorithmSays {
+  position: absolute;
+  top: 143px;
+  left: 115px;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 456px;
+  height: 51px;
+}
+.homeChild20 {
+  position: absolute;
+  top: 199px;
+  left: 776px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro-200);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 346px;
+  height: 248px;
+}
+.trending {
+  position: absolute;
+  top: 143px;
+  left: 895px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.homeChild21,
+.homeChild22,
+.homeChild23 {
+  position: absolute;
+  top: 227px;
+  left: 800px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 300px;
+  height: 50px;
+}
+.homeChild22,
+.homeChild23 {
+  top: 302px;
+  left: 799px;
+}
+.homeChild23 {
+  top: 380px;
+  left: 800px;
+}
+.image12Icon,
+.image13Icon,
+.image14Icon {
+  position: absolute;
+  top: 232px;
+  left: 812px;
+  width: 138px;
+  height: 41px;
+  object-fit: cover;
+}
+.image13Icon,
+.image14Icon {
+  top: 235px;
+  left: 956px;
+  width: 74px;
+  height: 33px;
+}
+.image14Icon {
+  top: 302px;
+  left: 816px;
+  width: 135px;
+  height: 44px;
+}
+.image15Icon,
+.image16Icon,
+.image17Icon {
+  position: absolute;
+  top: 307px;
+  left: 956px;
+  width: 76px;
+  height: 35px;
+  object-fit: cover;
+}
+.image16Icon,
+.image17Icon {
+  top: 380px;
+  left: 813px;
+  width: 143px;
+  height: 43px;
+}
+.image17Icon {
+  top: 391px;
+  left: 970px;
+  width: 60px;
+  height: 24px;
+}
+.homeChild24 {
+  position: absolute;
+  top: 625px;
+  left: 777px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro-100);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 346px;
+  height: 262px;
+}
+.celestiaHasPotential {
+  position: absolute;
+  top: 659px;
+  left: 813px;
+  font-size: var(--font-size-lg);
+}
+.vectorIcon {
+  position: absolute;
+  height: 3.24%;
+  width: 0.33%;
+  top: 60.74%;
+  right: 58.16%;
+  bottom: 36.02%;
+  left: 41.51%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.bitcoinShouldDump {
+  position: absolute;
+  top: 728px;
+  left: 816px;
+  font-size: var(--font-size-lg);
+}
+.vectorIcon1 {
+  position: absolute;
+  height: 3.24%;
+  width: 0.33%;
+  top: 67.13%;
+  right: 58.16%;
+  bottom: 29.63%;
+  left: 41.51%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.avalunchIsGoing {
+  margin: 0;
+}
+.avalunchIsGoingContainer {
+  position: absolute;
+  top: 788px;
+  left: 813px;
+  font-size: var(--font-size-lg);
+}
+.vectorIcon2 {
+  position: absolute;
+  height: 3.24%;
+  width: 0.33%;
+  top: 73.89%;
+  right: 58.16%;
+  bottom: 22.87%;
+  left: 41.51%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.suggestions {
+  position: absolute;
+  top: 569px;
+  left: 875px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.lineIcon {
+  position: absolute;
+  top: 705px;
+  left: 789px;
+  max-height: 100%;
+  width: 316px;
+  object-fit: cover;
+}
+.lineDiv {
+  position: absolute;
+  top: 776.5px;
+  left: 788.5px;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 317px;
+  height: 1px;
+}
+.home {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-black);
+  font-family: var(--font-saira-semicondensed);
+}

@@ -1,0 +1,124 @@
+.frameChild {
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  width: 259px;
+}
+.frame {
+  position: absolute;
+  top: 18px;
+  left: 445px;
+  width: 1414px;
+  height: 55px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.microsoftteamsImage2Icon {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  border-radius: var(--br-533xl-5);
+  width: 1960px;
+  height: 1105px;
+  object-fit: cover;
+}
+.portfolioChild {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  border-radius: 0 0 var(--br-xl) var(--br-xl);
+  background-color: var(--color-midnightblue);
+  width: 1920px;
+  height: 95px;
+}
+.vectorIcon,
+.vectorIcon1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.vectorIcon1 {
+  height: 50.39%;
+  width: 54.56%;
+  top: 25%;
+  right: 22.52%;
+  bottom: 24.61%;
+  left: 22.91%;
+}
+.appLogoInspiraton9 {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 9.44%;
+  width: 5.36%;
+  top: 0;
+  right: 94.9%;
+  bottom: 90.56%;
+  left: -0.26%;
+}
+.loginSign {
+  position: relative;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 39px;
+  flex-shrink: 0;
+}
+.cryptoWrapper,
+.loginSignUpWrapper,
+.stocksWrapper {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 22px;
+  left: 1637px;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  width: 259px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-xl);
+  box-sizing: border-box;
+  color: inherit;
+}
+.cryptoWrapper,
+.stocksWrapper {
+  top: 25px;
+  left: 1311px;
+}
+.stocksWrapper {
+  left: 985px;
+}
+.portfolioItem {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 1920px;
+  height: 1017px;
+  overflow: hidden;
+}
+.portfolio {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-saira-semicondensed);
+}
