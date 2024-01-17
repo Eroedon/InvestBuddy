@@ -515,16 +515,17 @@ class PortfolioClass:
 
         if 'crypto_symbol' in request.POST:
             crypto_symbol = request.POST.get('crypto_symbol')
-            crypto_date = str(request.POST.get('crypto_date')) #2022-06-08
-
-            year = crypto_date[:4]
-            month = crypto_date[5:7]
-            day = crypto_date[8:]
-
-            history_result = str(self.crypto.getHistoryData(crypto_symbol,day,month,year))
-            print('crypto_symbol',crypto_symbol)
-            print('crypto_date',crypto_date)
-            print('history_result',history_result)
+            if crypto_symbol.isalpha():
+                crypto_date = str(request.POST.get('crypto_date')) #2022-06-08
+    
+                year = crypto_date[:4]
+                month = crypto_date[5:7]
+                day = crypto_date[8:]
+    
+                history_result = str(self.crypto.getHistoryData(crypto_symbol,day,month,year))
+                print('crypto_symbol',crypto_symbol)
+                print('crypto_date',crypto_date)
+                print('history_result',history_result)
 
 
         return render(request, "pages/portfoliohome.html", {'authenticate':authentication.authenticate,'user_email': authentication.user_email,'stocks':stocklist,'cryptos':cryptolist,'wallet_stocklist':wallet_stocklist,'wallet_cryptolist':wallet_cryptolist,'history_result':history_result})
