@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stocks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    }
+    
+    td, th {
+        border-left:solid black 1px;
+        border-top:solid black 1px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: rgba(0, 0, 255, 0.533);
+        border-top: none;
+    }
+
+    td:first-child, th:first-child {
+        border-left: none;
+  }
+
+  .center {
+  margin-left: auto;
+  margin-right: auto;
+  }
+  </style>
+</head>
+<body style="background-color:rgb(148, 158, 160);">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Investood</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/stocks">Stocks</a></li>
+      <li><a href="/crypto">Cryptocurrency</a></li>
+      {% if authenticate == "true" %}
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="#">Welcome {{user_email}}</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {% else %}
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+  
+
+<table class="table table-striped table-hover center" style="width:80%; background-color: rgba(250, 250, 250, 0.992);">
+  <thead class="bg-light">
+    <tr>
+      <th></th>
+      <th>Stock_id</th>
+      <th>Stock_name</th>
+      <th>Value</th> 
+      <th>Volume</th>
+      <th>Min</th> 
+      <th>Max</th>
+      <th>Rate</th> 
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in stocks %}
+    <tr>
+      <td>
+        <td>{{stock.stock_id}}</td>
+        <td>{{stock.stock_name}}</td>
+        <td>{{stock.stock_value}}</td>
+        <td>{{stock.stock_volume}}</td>
+        <td>{{stock.stock_rate}}</td>
+        <td>{{stock.stock_min}}</td> 
+        <td>{{stock.stock_max}}</td>
+        <td>{{stock.stock_date}}</td> 
+        {% if stock.arrow == "up" %}
+        <td style="font-size:25px; color: rgba(67, 221, 32, 0.992);">&#11014;</td>
+        {% else %}
+        <td style="font-size:25px; color: rgba(199, 17, 17, 0.992);">&#11015;</td>
+        {% endif %}
+      <td>
+        <form method="post" action="/stocks/addportfolio">
+          {% csrf_token %}
+          <input type="hidden" name="stock" value={{stock.stock_id}}>
+          <button type="submit">Add to Portfolio</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+    h3 {text-align: center;}
+
+
+    table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    }
+    
+    td, th {
+        border-left:solid black 1px;
+        border-top:solid black 1px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: rgba(0, 0, 255, 0.533);
+        border-top: none;
+    }
+
+    td:first-child, th:first-child {
+        border-left: none;
+  }
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    form { 
+      margin: 0 auto;
+width:250px;
+}
+  </style>
+</head>
+<body style="background-color:rgb(148, 158, 160);">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Investood</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/stocks">Stocks</a></li>
+      <li><a href="/crypto">Cryptocurrency</a></li>
+      {% if authenticate == "true" %}
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="#">Welcome {{user_email}}</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {% else %}
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+<h3>Followed Stocks</h3>
+<table class="table table-striped table-hover center" style="width:80%; background-color: rgba(250, 250, 250, 0.992);">
+  <thead class="bg-light">
+    <tr>
+      <th></th>
+      <th>Stock_id</th>
+      <th>Stock Name</th>
+      <th>Value</th> 
+      <th>Volume</th>
+      <th>Min</th> 
+      <th>Max</th>
+      <th>Rate</th> 
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in stocks %}
+    <tr>
+      <td>
+        <td>{{stock.stock_id}}</td>
+        <td>{{stock.stock_name}}</td>
+        <td>{{stock.stock_value}}</td>
+        <td>{{stock.stock_volume}}</td>
+        <td>{{stock.stock_rate}}</td>
+        <td>{{stock.stock_min}}</td> 
+        <td>{{stock.stock_max}}</td>
+        <td>{{stock.stock_date}}</td> 
+        {% if stock.arrow == "up" %}
+        <td style="font-size:25px; color: rgba(67, 221, 32, 0.992);">&#11014;</td>
+        {% else %}
+        <td style="font-size:25px; color: rgba(199, 17, 17, 0.992);">&#11015;</td>
+        {% endif %}
+        <td>
+          <form method="post" action="/portfolio/add_stock_to_wallet">
+            {% csrf_token %}
+            <input type="text" class="form-control" id="amount" name="amount" placeholder="0.0" required>
+            <input type="hidden" name="add_stock" value={{stock.stock_id}}>
+            <button type="submit">Add to wallet</button>
+          </form>
+        </td>
+        <td>
+          <form method="post" action="/portfolio/remove_stockportfolio">
+            {% csrf_token %}
+            <input type="hidden" name="remove_stock" value={{stock.stock_id}}>
+            <button type="submit">Remove</button>
+          </form>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+<div class="row">
+<div class="col">
+<h3>Followed Cryptocurrencies</h3>
+<table class="table table-striped table-hover center" style="width:80%; background-color: rgba(250, 250, 250, 0.992);">
+  <thead class="bg-light">
+    <tr>
+      <th></th>
+      <th>Crypto ID</th>
+      <th>Crypto Name</th>
+      <th>Crypto Symbol</th> 
+      <th>Value</th>
+      <th>Value(TL)</th>
+      <th>Percentage Change(7days)</th>
+      <th>Date</th> 
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for crypto in cryptos %}
+    <tr>
+      <td>
+        <td>{{crypto.crypto_id}}</td>
+        <td>{{crypto.crypto_name}}</td>
+        <td>{{crypto.crypto_symbol}}</td>
+        <td>{{crypto.crypto_value}}</td>
+        <td>{{crypto.crypto_value_tl}}</td>
+        <td>{{crypto.percent_change_7d}}</td>
+        <td>{{crypto.crypto_date}}</td>
+        {% if crypto.arrow == "up" %}
+        <td style="font-size:25px; color: rgba(67, 221, 32, 0.992);">&#11014;</td>
+        {% else %}
+        <td style="font-size:25px; color: rgba(199, 17, 17, 0.992);">&#11015;</td>
+        {% endif %}
+        <td>
+          <form method="post" action="/portfolio/add_crypto_to_wallet">
+            {% csrf_token %}
+            <input type="text" class="form-control" id="amount" name="amount" placeholder="0.0" required>
+            <input type="hidden" name="add_crypto" value={{crypto.crypto_id}}>
+            <button type="submit">Add to wallet</button>
+          </form>
+        </td>
+        <td>
+          <form method="post" action="/portfolio/remove_cryptoportfolio">
+            {% csrf_token %}
+            <input type="hidden" name="remove_crypto" value={{crypto.crypto_id}}>
+            <button type="submit">Remove</button>
+          </form>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+<h3>Filter Cryptocurrency by Date</h3>
+<form method="post" >
+  {% csrf_token %}
+  <label for="crypto_symbol">Cryptocurrency Symbol</label>
+  <input type="text" class="form-control" id="crypto_symbol" name="crypto_symbol" placeholder="" required>
+  <label for="crypto_date">Date</label>
+  <input type="date" class="form-control" id="crypto_date" name="crypto_date" required>
+  <output name="history_result" for="history_result">Result in USD: {{history_result}}</output>
+  <button type="submit">Search</button>
+</form>
+
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-3">
+<h3>Wallet</h3>
+<table class="table table-striped table-hover center" style="width:80%; background-color: rgba(250, 250, 250, 0.992);">
+  <thead class="bg-light">
+    <tr>
+      <th></th>
+      <th>Crypto ID</th>
+      <th>Crypto Name</th>
+      <th>Crypto Symbol</th> 
+      <th>Crypto Amount</th>
+      <th>Crypto Value(TL)</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for crypto in wallet_cryptolist %}
+    <tr>
+      <td>
+        <td>{{crypto.crypto_id}}</td>
+        <td>{{crypto.crypto_name}}</td>
+        <td>{{crypto.crypto_symbol}}</td>
+        <td>{{crypto.crypto_value}}</td>
+        <td>{{crypto.crypto_value_tl}}</td>
+        <td>
+          <form method="post" action="/portfolio/remove_crypto_wallet">
+            {% csrf_token %}
+            <input type="hidden" name="remove_crypto_wallet" value={{crypto.crypto_id}}>
+            <button type="submit">Remove from wallet</button>
+          </form>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<div class="col-sm-3"></div>
+
+<div class="col-sm-3">
+  <h3 style="color:rgb(148, 158, 160);">Wallet</h3>
+  <table class="table table-striped table-hover center" style="width:80%; background-color: rgba(250, 250, 250, 0.992);">
+    <thead class="bg-light">
+      <tr>
+        <th></th>
+        <th>Stock ID</th>
+        <th>Stock Name</th>
+        <th>Stock Amount</th> 
+        <th>Stock Value(TL)</th> 
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for stock in wallet_stocklist %}
+      <tr>
+        <td>
+          <td>{{stock.stock_id}}</td>
+          <td>{{stock.stock_name}}</td>
+          <td>{{stock.stock_value}}</td>
+          <td>{{stock.stock_value_tl}}</td>
+          <td>
+            <form method="post" action="/portfolio/remove_stock_wallet">
+              {% csrf_token %}
+              <input type="hidden" name="remove_stock_wallet" value={{stock.stock_id}}>
+              <button type="submit" name = 'removebuttonwallet'>Remove from wallet</button>
+            </form>
+          </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1"></div>
+
+<!-- Modal signup
+<button type="submit" data-toggle="modal" data-target="#addwalletmodal" class="btn btn-primary">Add new item to Wallet</button>
+ -->
+</div>
+
+<!-- Modal signup -->
+<div class="modal fade" id="addwalletmodal" tabindex="-1" role="dialog" aria-labelledby="addwalletmodalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addwalletmodalLabel">Add new item to Wallet</h5>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+          {% csrf_token %}
+              <div class="form-group">
+                <label for="type_to_add">Choose a type:</label>
+                <select name="type_to_add" id="type_to_add">
+                  <option value="Cryptocurrency">Cryptocurrency</option>
+                  <option value="Stock">Stock</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="item_id">Item ID</label>
+                <input type="text" class="form-control" id="item_id" name="item_id" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="amount">Item Amount</label>
+                <input type="text" class="form-control" id="amount" name="amount" placeholder="0.0">
+                <button type="submit" class="btn btn-primary" name = 'addwallet'>Submit</button>
+              </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+
+ 
+
+</body>
+</html>
