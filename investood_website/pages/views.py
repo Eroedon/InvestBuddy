@@ -623,7 +623,7 @@ class PortfolioClass:
             new_wallet.save()
 
         # return self.portfoliopage(request)
-        return redirect("http://localhost:8000/portfolio")
+        return redirect("https://investood.onrender.com/portfolio")
 
 
     def remove_crypto_wallet(self,request):
@@ -646,4 +646,4 @@ class PortfolioClass:
                     found_wallet.save()
                     print('removed crypto:',crypto_id)
 
-        return redirect("http://localhost:8000/portfolio")
+        return redirect("https://investood.onrender.com/portfolio")
