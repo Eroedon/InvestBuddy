@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["investood.onrender.com"]
 
+CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com']
 
 # Application definition
 
