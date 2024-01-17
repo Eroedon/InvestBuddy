@@ -565,7 +565,7 @@ class PortfolioClass:
         else:
             new_wallet = Wallet(user_id=found_user.user_id,stock_id = str(item_id),stock_amount=str(item_amount))
             new_wallet.save()
-        return redirect("http://localhost:8000/portfolio")
+        return redirect("https://investood.onrender.com/portfolio")
 
     def remove_stock_wallet(self,request):
         if request.method == 'POST':
@@ -587,7 +587,7 @@ class PortfolioClass:
                     found_wallet.save()
                     print('removed stock:',stock_id)
 
-        return redirect("http://localhost:8000/portfolio")
+        return redirect("https://investood.onrender.com/portfolio")
     
 
     ###
